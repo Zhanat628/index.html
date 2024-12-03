@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyMebel.kz - Жиһаз дүкені</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            text-align: center;
+            padding: 50px;
+            stybackground: url('https://via.placeholder.com/1500x500') no-repeat center center/cover;
+            color: white;
+            min-height: 600px; /* Суреттің биіктігін үлкейту */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .categories {
+            display: flex;
+            justify-content: space-around;
+            padding: 40px;
+        }
+        .category {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            width: 30%;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MyMebel.kz</h1>
+        <p>Жиһаздардың сапалы дүкені</p>
+    </header>
+
+    <nav>
+        <a href="сайт15.html">Басты бет</a>
+        <a href="сайт16.html">Жатын бөлмеге арналған жиһаз</a>
+        <a href="сайт17.html">Ас үйге арналған жиһаз</a>
+        <a href="сайт18.html">Қонақ бөлмеге арналған жиһаз</a>
+        <a href="сайт52.html">Байланыс</a>
+    </nav>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сатып алу</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            max-width: 600px;
+            margin: 50px auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], input[type="number"], select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            background-color: #28a745;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Сатып алу</h1>
+        <form action="#" method="POST">
+            <!-- Телефон нөмірі -->
+            <label for="phone">Телефон нөмірі</label>
+            <input type="tel" id="phone" name="phone" placeholder="+7 707 123 4567" required>
+
+            <!-- Электрондық пошта -->
+            <label for="email">Электрондық пошта</label>
+            <input type="email" id="email" name="email" placeholder="example@email.com" required>
+
+            <!-- Мекенжай -->
+            <label for="address">Мекенжай</label>
+            <input type="text" id="address" name="address" placeholder="Мекенжайыңызды жазыңыз" required>
+
+            <!-- Жеткізу қызметі -->
+            <label for="delivery">Жеткізу қызметі</label>
+            <select id="delivery" name="delivery" required>
+                <option value="" disabled selected>Қызмет түрін таңдаңыз</option>
+                <option value="standard">Стандартты жеткізу (3-5 күн)</option>
+                <option value="express">Экспресс жеткізу (1-2 күн)</option>
+                <option value="pickup">Өзі алып кету</option>
+            </select>
+
+            <!-- Төлем картасы -->
+            <label for="card-number">Карта нөмірі</label>
+            <input type="number" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" required>
+
+            <!-- Карта иесі -->
+            <label for="card-holder">Карта иесінің аты-жөні</label>
+            <input type="text" id="card-holder" name="card-holder" placeholder="Аты-жөні" required>
+
+            <!-- Карта жарамдылық мерзімі -->
+            <label for="card-expiry">Карта жарамдылық мерзімі</label>
+            <input type="text" id="card-expiry" name="card-expiry" placeholder="MM/YY" required>
+
+            <!-- CVV -->
+            <label for="card-cvv">CVV-код</label>
+            <input type="number" id="card-cvv" name="card-cvv" placeholder="123" required>
+
+            <!-- Сатып алу батырмасы -->
+            <button type="submit" class="btn">Сатып алу</button>
+        </form>
+    </div>
+
+</body>
+</html>
+
+    <footer>
+        <p>&copy; 2024 MyMebel.kz</p>
+    </footer>
+</body>
+</html>

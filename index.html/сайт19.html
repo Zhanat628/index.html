@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сатып алу беті</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Сатып алу формасы</h2>
+        <form id="purchaseForm">
+            <label for="name">Аты-жөні:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="phone">Телефон нөмірі:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="address">Мекен-жайы:</label>
+            <textarea id="address" name="address" rows="4" required></textarea>
+
+            <button type="submit" class="button">Жіберу</button>
+        </form>
+    </div>
+
+    <script>
+        // Форма жіберілген кезде деректерді өңдеу
+        document.getElementById("purchaseForm").addEventListener("submit", function(event) {
+            event.preventDefault();  // Форманы жіберуді тоқтату
+
+            // Формадан деректер алу
+            var name = document.getElementById("name").value;
+            var phone = document.getElementById("phone").value;
+            var address = document.getElementById("address").value;
+
+            // Деректерді консольға шығару (немесе серверге жіберу)
+            console.log("Сатып алушының аты: " + name);
+            console.log("Телефон нөмірі: " + phone);
+            console.log("Мекен-жайы: " + address);
+
+            // Қолданушыға хабарлама көрсету
+            alert("Сіздің деректеріңіз сәтті қабылданды! Біз сізбен байланысамыз.");
+            
+            // Форманы тазалау
+            document.getElementById("purchaseForm").reset();
+        });
+    </script>
+
+</body>
+</html>

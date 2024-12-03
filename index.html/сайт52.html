@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="kk">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сатып алу</title>
+    <style>
+        <body bgcolor=grey> {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .radio-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .radio-group label {
+            font-weight: normal;
+        }
+        .submit-btn {
+            background: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .submit-btn:hover {
+            background: #0056b3;
+        }
+        .payment-methods img {
+            width: 100px;
+            margin: 10px 5px;
+        }
+        .qr-code {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .qr-code img {
+            width: 200px;
+            height: 200px;
+        }
+        .payment-links a {
+            display: block;
+            margin: 10px 0;
+            text-decoration: none;
+            color: #007BFF;
+            font-size: 18px;
+        }
+        .payment-links a:hover {
+            text-decoration: underline;
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Сатып алу</h1>
+
+        <form id="purchaseForm">
+            <!-- Сатып алушының мәліметтері -->
+            <label for="name">Аты-жөні:</label>
+            <input type="text" id="name" name="name" placeholder="Атыңызды енгізіңіз" required>
+
+            <label for="phone">Телефон нөмірі:</label>
+            <input type="tel" id="phone" name="phone" placeholder="+7 707 123 4567" required>
+
+            <label for="email">Электрондық пошта:</label>
+            <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+
+            <label for="address">Мекенжайы:</label>
+            <textarea id="address" name="address" rows="3" placeholder="Толық мекенжайыңызды енгізіңіз" required></textarea>
+
+            <!-- Жеткізу қызметі -->
+            <label>Жеткізу қызметі:</label>
+            <div class="radio-group">
+                <label>
+                    <input type="radio" name="delivery" value="pickup" required> Өзі алып кету
+                </label>
+                <label>
+                    <input type="radio" name="delivery" value="city"> Қала ішінде (3000₸)
+                </label>
+                <label>
+                    <input type="radio" name="delivery" value="region"> Ауыл аймағы (5000₸)
+                </label>
+            </div>
+
+            <!-- Төлем әдісі -->
+            <label>Төлем әдісі:</label>
+            <div class="radio-group">
+                <label>
+                    <input type="radio" name="payment" value="kaspi_card" required> Kaspi Картасы
+                </label>
+                <label>
+                    <input type="radio" name="payment" value="halyk_card"> Халық Картасы
+                </label>
+                <label>
+                    <input type="radio" name="payment" value="kaspi_qr"> Kaspi QR
+                </label>
+            </div>
+
+            <!-- QR коды -->
+            <div class="qr-code">
+                <p>Kaspi QR арқылы төлем жасау үшін:</p>
+                <img src="C:\Users\12\Desktop\index.html/66.jpg" alt="Kaspi QR коды">
+                <p>Төлемді аяқтаған соң, бізге хабарласыңыз: +7 747 998 0808</p>
+            </div>
+
+            <!-- Төлем сілтемелері -->
+            <div class="payment-links">
+                <p>Төмендегі сілтемелер арқылы төлем жасау:</p>
+                <a href="https://kaspi.kz/pay/+77479980808" target="_blank">Kaspi арқылы төлеу: +7 747 998 0808</a>
+                <a href="https://kaspi.kz/pay/+77078898080" target="_blank">Halyk арқылы төлеу: +7 707 889 8080</a>
+            </div>
+
+            <!-- Қосымша ақпарат -->
+            <label for="notes">Қосымша ақпарат (опционалды):</label>
+            <textarea id="notes" name="notes" rows="2" placeholder="Қосымша ескерту жазыңыз (қажет болса)"></textarea>
+
+            <!-- Сатып алу батырмасы -->
+            <button type="submit" class="submit-btn">Сатып алу</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("purchaseForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Тапсырысыңыз қабылданды! Менеджер сізбен жақын арада хабарласады.");
+        });
+    </script>
+</body>
+</html>
